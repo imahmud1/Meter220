@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <p>Basic Instructions:</p>
+            <ul>
+                <li>Copy the entire message from your meter token return message.</li>
+                <li>Paste it into the box below.</li>
+                <li>Check token numbers one by one.</li>
+            </ul>
+        </div>
+        <textarea id="tokenInput" placeholder="Enter your token message here (Only tested for Bkash return Messages)..."></textarea>
+        <button id="startButton" class="start-btn"><i class="fas fa-play"></i> Start Inserting</button>
+        <div id="warning" class="warning" style="display: none;">Please enter a valid token message.</div>
+        <div id="tokenDisplay" class="token-display">
+            <div id="tokenNumberBox" class="token-number-box"></div>
+        </div>
+        <div class="navigation">
+            <button id="prevToken" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous Token</button>
+            <button id="nextToken" class="nav-btn">Next Token <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

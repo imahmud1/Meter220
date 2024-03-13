@@ -123,6 +123,38 @@ body {
     margin-bottom: 5px;
 }
 
+.token-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #007bff;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px;
+}
+
+tr.done-token {
+    background-color: #d4edda;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr.current-token {
+    background-color: #add8e6;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 10px;

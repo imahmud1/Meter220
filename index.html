@@ -16,10 +16,19 @@
                 <li>Paste it into the box below.</li>
                 <li>Check token numbers one by one.</li>
             </ul>
+            <br>
+            <p>নিয়মাবলী</p>
+            <ul>
+                <li>আপনার মিটার টোকেন এর সম্পূর্ণ মেসেজটি কপি করুন</li>
+                <li>নিচের বক্সে সম্পূর্ণ মেসেজটি পেষ্ট করে দিন</li>
+                <li>Next Token এ ক্লিক করে একটি একটি করে টোকেন চেক করুন</li>
+            </ul>
         </div>
-        <textarea id="tokenInput" placeholder="Enter your token message here (Only tested for Bkash return Messages)..."></textarea>
+        <textarea id="tokenInput" placeholder="Paste your Meter token message here"></textarea>
         <button id="startButton" class="start-btn"><i class="fas fa-play"></i> Start Inserting</button>
         <div id="warning" class="warning" style="display: none;">Please enter a valid token message.</div>
+        <div id="tokenTableContainer" class="token-table-container">
+        </div>
         <div id="tokenDisplay" class="token-display">
             <div id="tokenNumberBox" class="token-number-box"></div>
         </div>

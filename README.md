@@ -40,6 +40,10 @@ We welcome contributions to Token Display! Whether you're interested in fixing b
 
 If you have questions, suggestions, or want to discuss potential improvements, feel free to [open an issue](https://github.com/imahmud1/Meter220/issues) in the repository.
 
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details. Contributions are welcome, but commercial use and claiming ownership of the software are not permitted under this license.
+
 ## Acknowledgments
 
 - Icons provided by [FontAwesome](https://fontawesome.com/).

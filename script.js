@@ -19,7 +19,7 @@ function displayToken(index) {
 function createTable() {
     const tableContainer = document.getElementById('tokenTableContainer');
     let tableHTML = '<table>';
-    tableHTML += '<thead><tr><th>Sequence</th><th>Token</th></tr></thead>';
+    tableHTML += '<thead><tr><th>Sequence</th><th>Tokens List</th></tr></thead>';
     tableHTML += '<tbody>';
     tokens.forEach((token, index) => {
         tableHTML += `<tr id="tokenRow-${index}"><td>${index}</td><td>${token}</td></tr>`;
@@ -66,8 +66,27 @@ document.getElementById('startButton').addEventListener('click', function() {
         displayToken(currentIndex);
         updateTable(currentIndex);
         this.style.display = 'none';
-        window.scrollTo(0, document.body.scrollHeight);
+        setTimeout(() => {
+            const contentAboveFooter = document.getElementById('tokenTableContainer');
+            const footer = document.querySelector('footer');
+    
+            const contentRect = contentAboveFooter.getBoundingClientRect();
+            const footerRect = footer.getBoundingClientRect();
+    
+            const scrollToPosition = window.scrollY + contentRect.bottom - window.innerHeight + footerRect.height;
+
+            window.scrollTo({
+                top: scrollToPosition,
+                behavior: 'smooth'
+            });
+        }, 100);
+        document.getElementById('tokenInput').style.display = 'none';
+        document.getElementById('newToken').style.display = 'inline-block';
     }
+});
+
+document.getElementById('newToken').addEventListener('click', function() {
+    window.location.reload();
 });
 
 document.getElementById('nextToken').addEventListener('click', function() {

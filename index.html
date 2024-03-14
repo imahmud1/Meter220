@@ -25,12 +25,15 @@
             </ul>
         </div>
         <textarea id="tokenInput" placeholder="Paste your Meter token message here"></textarea>
+        <div class="new-token-container">
+            <button id="newToken" class="nav-btn" style="display: none;">New Token <i class="fas fa-plus"></i></button>
+        </div>
         <button id="startButton" class="start-btn"><i class="fas fa-play"></i> Start Inserting</button>
         <div id="warning" class="warning" style="display: none;">Please enter a valid token message.</div>
-        <div id="tokenTableContainer" class="token-table-container">
-        </div>
         <div id="tokenDisplay" class="token-display">
             <div id="tokenNumberBox" class="token-number-box"></div>
+        </div>
+        <div id="tokenTableContainer" class="token-table-container">
         </div>
         <div class="navigation">
             <button id="prevToken" class="nav-btn"><i class="fas fa-chevron-left"></i> Previous Token</button>
@@ -38,5 +41,18 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <div id="scroll-target"></div>
+    <footer>
+        <div class="footer-content">
+            <span>© Iftikhar Mahmud</span>
+            <span class="footer-icons">
+                <a href="https://www.linkedin.com/in/iftikharmahmud/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/imahmud1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </span>
+        </div>
+        <div class="footer-contribute">
+            <a href="https://github.com/imahmud1/Meter220" target="_blank">Want to contribute to this project? Click here.</a>
+        </div>
+    </footer>
 </body>
 </html>

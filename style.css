@@ -180,20 +180,20 @@ footer {
     padding: 20px;
     font-size: 16px;
     border-top: 1px solid #e7e7e7;
-    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-top: auto;
 }
 
 .footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Ensures it wraps to the next line on smaller screens */
-    gap: 10px; /* Adds space between the text and icons */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .footer-icons {
     display: flex;
-    gap: 10px; /* Adds space between the icons */
+    gap: 10px;
 }
 
 .footer-icons a {
@@ -206,11 +206,11 @@ footer {
 }
 
 .footer-content i {
-    font-size: 24px; /* Size of the icons */
+    font-size: 24px;
 }
 
 .footer-contribute {
-    padding-top: 10px; /* Space from the content above */
+    padding-top: 10px;
 }
 
 .footer-contribute a {

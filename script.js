@@ -22,7 +22,7 @@ function createTable() {
     tableHTML += '<thead><tr><th>Sequence</th><th>Tokens List</th></tr></thead>';
     tableHTML += '<tbody>';
     tokens.forEach((token, index) => {
-        tableHTML += `<tr id="tokenRow-${index}"><td>${index}</td><td>${token}</td></tr>`;
+        tableHTML += `<tr id="tokenRow-${index}"><td>${index + startingSequence}</td><td>${token}</td></tr>`;
     });
     tableHTML += '</tbody></table>';
     tableContainer.innerHTML = tableHTML;
@@ -61,6 +61,17 @@ document.getElementById('startButton').addEventListener('click', function() {
         warningDiv.textContent = 'Please enter a valid token message.';
         warningDiv.style.display = 'block';
     } else {
+        // Check for the presence of "Seq:" or "SquNo:" pattern
+        const sequenceRegex = /Seq:(-?\d+)=\d+|SquNo:(-?\d+)=\d+/;
+        const match = input.match(sequenceRegex);
+
+        if (match) {
+            const sequenceNumber = match[1] || match[2];
+            startingSequence = parseInt(sequenceNumber, 10);
+        } else {
+            startingSequence = 0;
+        }
+
         createTable();
         currentIndex = 0;
         displayToken(currentIndex);
@@ -69,10 +80,10 @@ document.getElementById('startButton').addEventListener('click', function() {
         setTimeout(() => {
             const contentAboveFooter = document.getElementById('tokenTableContainer');
             const footer = document.querySelector('footer');
-    
+
             const contentRect = contentAboveFooter.getBoundingClientRect();
             const footerRect = footer.getBoundingClientRect();
-    
+
             const scrollToPosition = window.scrollY + contentRect.bottom - window.innerHeight + footerRect.height;
 
             window.scrollTo({
